@@ -1,0 +1,31 @@
+plugins {
+    id "eclipse"
+    id "idea"
+    id "war"
+    id "org.graceframework.grace-web"
+}
+
+group "@grace.codegen.defaultPackage@"
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    developmentOnly
+}
+
+dependencies {
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
+    console "org.graceframework:grace-console"
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation "org.springframework.boot:spring-boot-starter-tomcat"
+    implementation "org.graceframework:grace-boot"
+    profile "org.graceframework.profiles:web"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
