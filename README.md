@@ -14,6 +14,12 @@ Grace `2023.0.0` provides Application Template to allow developers customize the
 $ grace create-app grace.apps.minimalist --template https://github.com/grace-templates/minimalist.git
 ```
 
+or,
+
+```bash
+$ grace create-app grace.apps.minimalist --template https://github.com/grace-templates/minimalist/archive/refs/heads/main.zip
+```
+
 ### Why you should rely on fresh, new, minimalist Grace application
 
 Creating a minimal app has the following advantages:
